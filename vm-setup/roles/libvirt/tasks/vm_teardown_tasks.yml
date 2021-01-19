@@ -17,7 +17,7 @@
     LIBVIRT_DEFAULT_URI: "{{ libvirt_uri }}"
   block:
 
-    - when: vm_nodes
+    - when: not vm_nodes|bool
       block:
 
         # Check if the vm nodes exist.
